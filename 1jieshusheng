@@ -1,0 +1,253 @@
+【intnet-data】
+建立：2023.8.30
+修改：2023.10.5
+
+
+
+
+（数据同步）蓝奏云：https://wwpa.lanzouy.com/b04ka1ckd
+		一些安卓软件
+		via书签
+		termux数据
+		落雪音乐数据
+		星愿主题
+		几个电脑软件
+		
+
+
+（安卓虚拟机）
+  下载逍遥模拟器   http://www.xyaz.cn/index-360.html?bd_vid=8537973176542747669
+  下载虚拟系统      https://www.123pan.com/s/AO1LVv-0gcYA.html
+
+
+（bvn火影）https://wwpa.lanzouy.com/b04kod97i  密码:56yp
+
+（web服务器）https://lightzhan.lanzoui.com/b015wjsri 密码：h3mu
+
+
+（intnet项目2.0）https://wwpa.lanzouy.com/iefIK1bubn1i 密码:40i6
+
+（音乐）
+https://wwpa.lanzouy.com/ih0IJ1dtbdgj
+
+====================
+【几个网站】
+建立:2023.10.5
+修改:2023.10.22
+
+
+
+
+
+ai  https://c.binjie.fun/#/chat/1695905729100
+
+
+md文件在线编辑  https://stackedit.cn/app#
+
+
+短视频去水印  http://api.spapi.cn/
+
+
+壁纸  https://wallhaven.cc/
+
+
+我的世界下载  https://mcapks.com/
+
+
+侠盗猎车下载  https://www.pyzyb.com/
+
+
+绿色软件小站 https://www.gndown.com/
+
+geph 
+ https://f001.backblazeb2.com/file/geph4-dl/geph-releases/dl.html
+====================
+【批处理源代码】
+建立：2023.10.14
+修改：
+
+
+
+
+（login.vbs）
+Set IE = CreateObject("InternetExplorer.Application")
+IE.Visible = True
+
+IE.Navigate "http://portal.ikuai8-wifi.com/templates/custom/user.html?type=1&timestamp=1695171027&mac=6c:4b:90:a6:8c:16&router_ver=3.7.5&firmware=IK-RouterOS&template=custom&gwid=2bff8e90c37845e9b15a324af85828e3&user_ip=192%2E168%2E10%2E68"
+
+Do While IE.Busy Or IE.ReadyState <> 4
+    WScript.Sleep 100
+Loop
+
+IE.Document.getElementById("ikAccount").value = "18338856913"
+IE.Document.getElementById("ikPassword").value = "888"
+
+Set loginButton = IE.Document.querySelector(".login")
+loginButton.Click
+
+'WScript.Sleep 2000
+
+
+
+
+（main.bat）
+@echo off
+:index
+color a
+echo================================================
+echo 摆脱控制，连接网络，走向世界
+echo================================================
+echo 1.结束老师控制
+echo 2.诊断网络
+echo 3.连接网络
+echo 0.退出
+echo.
+echo.
+echo.
+set /p num=输入后按回车      
+goto %num%
+
+:1
+timeout /t 10
+taskkill /f /im StudentMain.exe /t
+pause
+cls
+goto index
+
+:2
+msdt.exe /id NetworkDiagnosticsNetworkAdapter
+pause
+cls
+goto index
+
+:3
+start login.vbs
+pasue
+cls
+goto index
+
+:0
+exit
+====================
+【电脑版我的世界，配置方法】
+建立：2023.10.14
+修改：2023.10.21
+
+
+
+
+下载hcml启动器
+http://51speedtop02.yzhy17.cn/202212/HelloMLwdsjqdq.rar?timestamp=6544f456&auth_key=5fa237d96a2a4213e364de25e86d0a68&sign=f8604b844060b8556c2a25494b502b9e&t=65450266
+
+
+解压后运行会弹出一个msi插件下载一下
+https://aka.ms/download-jdk/microsoft-jdk-17-windows-x64.msi
+
+
+安装好msi插件
+
+
+把msi插件用hcml打开即可
+
+
+详细设置自行解决
+
+
+
+
+====================
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" >
+    <meta name="format-detection" content="telephone=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+      <title>用户认证</title>
+      <link type="text/css" href="css/base.css" rel="stylesheet"/>
+        <style type="text/css">
+            .users{ padding: 0 20px;}
+            .users .approve_title{ color: #f4417c;}
+            .users .username em{ background: url(image/users.png) no-repeat; width: 18px; height: 18px; position: absolute; left: 20px; top:15px;}
+            .users .userpassword{ margin-top: 0; border-top:0;}
+            .users .userpassword em{ background: url(image/pass_w.png) no-repeat; width: 14px; height: 18px; position: absolute; left: 20px; top:15px;}
+            .users .login{ background: #f4417c;}
+        </style>
+
+   </head>
+<body>
+<div class="users">
+    <div class="approve_title">用户认证</div>
+    <div class="input_in username">
+        <em></em>
+        <input type="text" id="ikAccount" placeholder="输入用户名"/>
+    </div>
+    <div class="input_in userpassword">
+        <em></em>
+        <input type="password" id="ikPassword" placeholder="输入密码"/>
+    </div>
+    <button class="login" onclick="getValues()">登录</button>
+</div>
+</body>
+<script src="js/jquery-1.8.3.min.js"></script>
+<script src="js/md5.js"></script>
+<script src="js/auth.js"></script>
+<script type="text/javascript">
+    var host = window.location.host;
+	var user_ip = GetQueryString("user_ip") ;
+	var user_mac = GetQueryString("mac") ;
+    if (user_ip == null || user_mac == null) {
+        user_ip = null
+        user_mac = null
+    }
+	var refer = GetQueryString("refer") ;
+	function getValues(){
+		var UserName=document.getElementById("ikAccount").value;
+		var PassWord=document.getElementById("ikPassword").value;
+		if(!UserName){
+			alert("请输入用户名");
+			return false;
+		}
+		if(!PassWord){
+			alert("请输入密码");
+			return false;
+		}
+        
+            var SumPassWord = CryptoJS.MD5(CryptoJS.MD5(PassWord).toString() + user_ip + user_mac).toString();
+        		location.href = "/Action/webauth-up?type=1&action=release&username=" + UserName + "&password=" + SumPassWord + "&refer=" + refer+ "&mac="+getParameterByName("mac");
+	}
+    </script>
+</html>
+
+====================
+【下载3a大作】
+建立：2023.11.3
+修改：
+
+
+
+
+资源网站：https://thebyrut.org/
+
+下载工具 ：https://jump1.51xiazai.cn/d?k=uTorrent&s=70799&t=51xiazai&u=https%253A%252F%252Fsafe.51xiazai.cn%252Fhuajunsafe%252FuTorrent3.5.5.46348.rar&n=2
+
+
+
+
+
+
+====================
+====================
+【办公软件&下载地址】
+建立:2023.10.22
+修改:2023.10
+adobe
+ 下载地址1 https://kerrynotes.com/adobe-2024-software-download/#toc3
+
+ 下载地址2 https://www.ghxi.com/?s=adobe
+
+
+office下载工具
+https://www.ghxi.com/officec2rins.html
