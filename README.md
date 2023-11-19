@@ -1,7 +1,6 @@
-# 数据同步
 【intnet-data】
 建立：2023.8.30
-修改：2023.10.5
+修改：2023.11.18
 
 
 
@@ -28,8 +27,11 @@
 
 （intnet项目2.0）https://wwpa.lanzouy.com/iefIK1bubn1i 密码:40i6
 
+（apk下载） https://www.123pan.com/s/AO1LVv-XLcYA.html
+
 （音乐）
-https://wwpa.lanzouy.com/ih0IJ1dtbdgj
+
+（中医）https://wwpa.lanzouy.com/b04ka1ckd
 
 ====================
 【几个网站】
@@ -62,74 +64,6 @@ md文件在线编辑  https://stackedit.cn/app#
 
 geph 
  https://f001.backblazeb2.com/file/geph4-dl/geph-releases/dl.html
-
-====================
-【批处理源代码】
-建立：2023.10.14
-修改：
-
-
-
-
-（login.vbs）
-Set IE = CreateObject("InternetExplorer.Application")
-IE.Visible = True
-
-IE.Navigate "http://portal.ikuai8-wifi.com/templates/custom/user.html?type=1&timestamp=1695171027&mac=6c:4b:90:a6:8c:16&router_ver=3.7.5&firmware=IK-RouterOS&template=custom&gwid=2bff8e90c37845e9b15a324af85828e3&user_ip=192%2E168%2E10%2E68"
-
-Do While IE.Busy Or IE.ReadyState <> 4
-    WScript.Sleep 100
-Loop
-
-IE.Document.getElementById("ikAccount").value = "18338856913"
-IE.Document.getElementById("ikPassword").value = "888"
-
-Set loginButton = IE.Document.querySelector(".login")
-loginButton.Click
-
-'WScript.Sleep 2000
-
-
-
-
-（main.bat）
-@echo off
-:index
-color a
-echo================================================
-echo 摆脱控制，连接网络，走向世界
-echo================================================
-echo 1.结束老师控制
-echo 2.诊断网络
-echo 3.连接网络
-echo 0.退出
-echo.
-echo.
-echo.
-set /p num=输入后按回车      
-goto %num%
-
-:1
-timeout /t 10
-taskkill /f /im StudentMain.exe /t
-pause
-cls
-goto index
-
-:2
-msdt.exe /id NetworkDiagnosticsNetworkAdapter
-pause
-cls
-goto index
-
-:3
-start login.vbs
-pasue
-cls
-goto index
-
-:0
-exit
 ====================
 【电脑版我的世界，配置方法】
 建立：2023.10.14
@@ -157,71 +91,6 @@ https://aka.ms/download-jdk/microsoft-jdk-17-windows-x64.msi
 
 
 
-====================
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" >
-    <meta name="format-detection" content="telephone=no" />
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-      <title>用户认证</title>
-      <link type="text/css" href="css/base.css" rel="stylesheet"/>
-        <style type="text/css">
-            .users{ padding: 0 20px;}
-            .users .approve_title{ color: #f4417c;}
-            .users .username em{ background: url(image/users.png) no-repeat; width: 18px; height: 18px; position: absolute; left: 20px; top:15px;}
-            .users .userpassword{ margin-top: 0; border-top:0;}
-            .users .userpassword em{ background: url(image/pass_w.png) no-repeat; width: 14px; height: 18px; position: absolute; left: 20px; top:15px;}
-            .users .login{ background: #f4417c;}
-        </style>
-
-   </head>
-<body>
-<div class="users">
-    <div class="approve_title">用户认证</div>
-    <div class="input_in username">
-        <em></em>
-        <input type="text" id="ikAccount" placeholder="输入用户名"/>
-    </div>
-    <div class="input_in userpassword">
-        <em></em>
-        <input type="password" id="ikPassword" placeholder="输入密码"/>
-    </div>
-    <button class="login" onclick="getValues()">登录</button>
-</div>
-</body>
-<script src="js/jquery-1.8.3.min.js"></script>
-<script src="js/md5.js"></script>
-<script src="js/auth.js"></script>
-<script type="text/javascript">
-    var host = window.location.host;
-	var user_ip = GetQueryString("user_ip") ;
-	var user_mac = GetQueryString("mac") ;
-    if (user_ip == null || user_mac == null) {
-        user_ip = null
-        user_mac = null
-    }
-	var refer = GetQueryString("refer") ;
-	function getValues(){
-		var UserName=document.getElementById("ikAccount").value;
-		var PassWord=document.getElementById("ikPassword").value;
-		if(!UserName){
-			alert("请输入用户名");
-			return false;
-		}
-		if(!PassWord){
-			alert("请输入密码");
-			return false;
-		}
-        
-            var SumPassWord = CryptoJS.MD5(CryptoJS.MD5(PassWord).toString() + user_ip + user_mac).toString();
-        		location.href = "/Action/webauth-up?type=1&action=release&username=" + UserName + "&password=" + SumPassWord + "&refer=" + refer+ "&mac="+getParameterByName("mac");
-	}
-    </script>
-</html>
 
 ====================
 【下载3a大作】
@@ -244,7 +113,7 @@ https://aka.ms/download-jdk/microsoft-jdk-17-windows-x64.msi
 ====================
 【办公软件&下载地址】
 建立:2023.10.22
-修改:2023.10
+修改:2023.11.18
 adobe
  下载地址1 https://kerrynotes.com/adobe-2024-software-download/#toc3
 
