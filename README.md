@@ -1,6 +1,6 @@
 【intnet-data】
 建立：2023.8.30
-修改：2023.11.18
+修改：2023.12.17
 
 
 
@@ -13,25 +13,21 @@
 		星愿主题
 		几个电脑软件
 		
-
-
-（安卓虚拟机）
-  下载逍遥模拟器   http://www.xyaz.cn/index-360.html?bd_vid=8537973176542747669
-  下载虚拟系统      https://www.123pan.com/s/AO1LVv-0gcYA.html
-
-
+		
 （bvn火影）https://wwpa.lanzouy.com/b04kod97i  密码:56yp
 
 （web服务器）https://lightzhan.lanzoui.com/b015wjsri 密码：h3mu
-
 
 （intnet项目2.0）https://wwpa.lanzouy.com/iefIK1bubn1i 密码:40i6
 
 （apk下载） https://www.123pan.com/s/AO1LVv-XLcYA.html
 
-（音乐）
+（音乐）https://www.123pan.com/s/AO1LVv-aBeYA.html
 
 （中医）https://wwpa.lanzouy.com/b04ka1ckd
+
+(区块链教程) https://www.123pan.com/s/AO1LVv-BBeYA.html
+
 
 ====================
 【几个网站】
